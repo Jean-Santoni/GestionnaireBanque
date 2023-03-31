@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Transaction implements Serializable {
     private String Nom;
     private Character Type;
-    private double Montant;
+    private Double Montant;
 
     public Transaction(String nom,Character type,double montant) {
         this.Nom = nom;
