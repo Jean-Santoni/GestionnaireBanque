@@ -14,6 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("IHM.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 200);
+
         stage.setTitle("Gestion bancaire");
         stage.getIcons().add(new Image("file:Image/3il.png"));
         stage.setScene(scene);
