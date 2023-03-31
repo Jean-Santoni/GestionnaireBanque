@@ -13,7 +13,11 @@ public class GestionnaireBancaire {
     private ArrayList<Transaction> listTransaction;
     private ArrayList<Taux> listTaux;
     private Double soldeCompte;
-
+    /**
+     * Constructeur de GestionnaireBancaire
+     *
+     *
+     */
     public GestionnaireBancaire() {
         this.listTransaction = new ArrayList<Transaction>() ;
         this.listTaux = new ArrayList<Taux>();
@@ -54,18 +58,27 @@ public class GestionnaireBancaire {
             e.printStackTrace();
         }
     }
-
+    /**
+     * retourne la liste de transaction
+     */
     public ArrayList<Transaction> getListTransaction() {
         return listTransaction;
     }
-
+    /**
+     * retourne la liste de Taux
+     */
     public ArrayList<Taux> getListTaux() {
         return listTaux;
     }
-
+    /**
+     * retourne le solde du compte
+     */
     public Double getSoldeCompte() {
         return soldeCompte;
     }
+    /**
+     * enregistre la liste de transaction sur le fichier binaire
+     */
     public void enregistrementList(){
 
         Path P1 = Paths.get("D:","\\Java3il\\GestionnaireBanque\\Data\\SaveList.bin");
@@ -77,6 +90,9 @@ public class GestionnaireBancaire {
         }
 
     }
+    /**
+     * recupere la liste de transaction depuis le fichier binaire
+     */
     public void recuprationListe(){
         ArrayList<String> maListe = new ArrayList<>();
         Path P1 = Paths.get("D:","\\Java3il\\GestionnaireBanque\\Data\\SaveList.bin");

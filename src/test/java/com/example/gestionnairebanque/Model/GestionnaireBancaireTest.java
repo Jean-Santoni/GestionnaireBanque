@@ -21,4 +21,14 @@ class GestionnaireBancaireTest {
         g.recuprationListe();
         assertEquals(t.get(0).getNom(),g.getListTransaction().get(0).getNom());
     }
+    @Test
+    void testOpreation() {
+        GestionnaireBancaire g = new GestionnaireBancaire();
+        Transaction t = new Transaction("sdhg",'d',10.0);
+        g.operationCompte(t);
+        assertEquals(-10.0,g.getSoldeCompte());
+        Transaction t1 = new Transaction("sdhg",'c',10.0);
+        g.operationCompte(t1);
+        assertEquals(-0.3000000000000007,g.getSoldeCompte());
+    }
 }

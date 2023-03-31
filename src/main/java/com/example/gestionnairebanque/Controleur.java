@@ -47,12 +47,7 @@ public class Controleur {
      listeCombo.add("Débit");
      ComboCredit.setItems(listeCombo);
      BtnEnregistrer.setOnMouseClicked(event -> actionEnregistrer(new ActionEvent() ));
-     LabelValeurSolde.setText(gestionnaireBancaire.getSoldeCompte().toString());
-     if (gestionnaireBancaire.getSoldeCompte()<0){
-      LabelValeurSolde.setTextFill(Color.rgb(255,0,0));
-     }else{
-      LabelValeurSolde.setTextFill(Color.rgb(0,255,0));
-     }
+     affichageSolde();
 
     }
  /**
@@ -60,8 +55,10 @@ public class Controleur {
   * @param event
   */
     private void actionEnregistrer(ActionEvent event){
+
+
      Character c=' ';
-     if(ComboCredit.toString().equals("Crédit")){
+     if( ComboCredit.getValue().toString().equals("Crédit")){
       c='c';
      }else{
       c='d';
@@ -72,8 +69,20 @@ public class Controleur {
       obsListCompte.add(t1.getNom()+t1.getMontant());
       ListVCompte.setItems(obsListCompte);
       gestionnaireBancaire.enregistrementList();
+     affichageSolde();
+
+
+    }
+ /**
+  * affiche le solde en couleur
+  */
+    public void affichageSolde(){
      LabelValeurSolde.setText(gestionnaireBancaire.getSoldeCompte().toString());
+     if (gestionnaireBancaire.getSoldeCompte()<0){
+      LabelValeurSolde.setTextFill(Color.rgb(255,0,0));
+     }else{
+      LabelValeurSolde.setTextFill(Color.rgb(0,255,0));
 
-
+     }
     }
 }
