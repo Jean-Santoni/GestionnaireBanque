@@ -32,7 +32,7 @@
             <Label fx:id="LabelType" text="Type" GridPane.rowIndex="3" />
             <TextField fx:id="TextFieldNom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="TextFieldMontant" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ComboBox fx:id="ComboCredit" accessibleRole="LIST_ITEM" prefWidth="150.0" promptText="Crédit" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="ComboCredit" accessibleRole="LIST_ITEM" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button fx:id="BtnEnregistrer" mnemonicParsing="false" text="Enregistrer" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="LabelSolde" text="Solde" GridPane.columnIndex="2" GridPane.rowIndex="5" />
             <Label fx:id="LabelValeurSolde" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="5" />

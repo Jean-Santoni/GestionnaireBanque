@@ -66,7 +66,7 @@ public class Controleur {
      Transaction t1 = new Transaction(TextFieldNom.getText(),c,Double.valueOf(TextFieldMontant.getText()));
      gestionnaireBancaire.getListTransaction().add(t1);
      gestionnaireBancaire.operationCompte(t1);
-      obsListCompte.add(t1.getNom()+t1.getMontant());
+      obsListCompte.add(t1.getNom()+"  "+t1.getMontant());
       ListVCompte.setItems(obsListCompte);
       gestionnaireBancaire.enregistrementList();
      affichageSolde();
